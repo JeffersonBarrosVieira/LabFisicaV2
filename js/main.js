@@ -65,6 +65,7 @@ window.addEventListener('mousemove', (event) => {
     mouse.y2 = event.y - canvas2.offsetTop;
 })
 
+// Desenho do Canvas 1
 ctx.fillStyle = 'white';
 ctx.font = '20px Roboto';
 ctx.fillText('Lab', 10, 16);
@@ -165,7 +166,6 @@ init()
 
 function animate(){
     ctx.clearRect(0,0, canvas1.width, canvas1.height);
-
     for (let i = 0; i < particleArray.length; i++){
         particleArray[i].draw();
         particleArray[i].update();
@@ -231,6 +231,13 @@ window.addEventListener('scroll', (e) => {
     for (let i = 0; i < particleRandom.length; i++){
         particleRandom[i].move(5);
     }
+})
+
+window.addEventListener('resize', (e) => {
+    canvas2.width = innerWidth;
+    canvas2.height = innerHeight;
+
+    init()
 })
 
 
