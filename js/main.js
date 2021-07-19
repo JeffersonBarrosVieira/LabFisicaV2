@@ -6,12 +6,12 @@ function esconderBar(cond){
     if(cond) {
         main_slide_bar.style.marginLeft = "-208px";
         main_content.style.marginLeft = "30px";
-        seta.style.rotate = "0deg";
+        seta.style.transform = "rotate(0deg)";
     }
     if(!cond){
         main_slide_bar.style.marginLeft = "0px";
         main_content.style.marginLeft = "238px";
-        seta.style.rotate = "180deg";
+        seta.style.transform = "rotate(180deg)";
     }
 }
 
