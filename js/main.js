@@ -43,7 +43,7 @@ const canvas2 = document.getElementById('canvas2');
 const ctx2 = canvas2.getContext('2d');
 
 let particleRandom = [];
-let spacingPoints2 = 15;
+let spacingPoints2 = 20;
 
 canvas2.width = innerWidth
 canvas2.height = innerHeight
@@ -65,18 +65,10 @@ window.addEventListener('mousemove', (event) => {
     mouse.y2 = event.y - canvas2.offsetTop;
 })
 
-// Desenho do Canvas 1
 ctx.fillStyle = 'white';
 ctx.font = '20px Roboto';
 ctx.fillText('Lab', 10, 16);
 ctx.fillText('Física', 0, 34);
-
-// var image = new Image()
-
-// image.src = "logo1.png"
-// image.onload = function (){
-//     ctx.drawImage(image, 0, 0)
-// }
 
 const textCoordinates = ctx.getImageData(0, 0, 100, 110);
 
@@ -147,7 +139,7 @@ class Particle {
     }
 }
 
-function init (percent = 1) {
+function init () {
     particleArray = []
     particleRandom = []
 
@@ -161,8 +153,8 @@ function init (percent = 1) {
         }
     }
 
-    for (let j = 0; j <1+ canvas2.height/(spacingPoints2*4*percent); j++) {
-        for (let i = 0; i <1+ canvas2.width/(spacingPoints2*4*percent); i++) {
+    for (let j = 0; j <1+ canvas2.height/(spacingPoints2*4); j++) {
+        for (let i = 0; i <1+ canvas2.width/(spacingPoints2*4); i++) {
             particleRandom.push(new Particle(Math.random() * canvas2.width, Math.random() * canvas2.height, 1, true));
         }
     }
@@ -173,6 +165,7 @@ init()
 
 function animate(){
     ctx.clearRect(0,0, canvas1.width, canvas1.height);
+
     for (let i = 0; i < particleArray.length; i++){
         particleArray[i].draw();
         particleArray[i].update();
@@ -238,15 +231,6 @@ window.addEventListener('scroll', (e) => {
     for (let i = 0; i < particleRandom.length; i++){
         particleRandom[i].move(5);
     }
-})
-
-let h = canvas2.height
-
-window.addEventListener('resize', (e) => {
-    canvas2.width = innerWidth;
-    canvas2.height = innerHeight;
-
-    init(1)
 })
 
 
