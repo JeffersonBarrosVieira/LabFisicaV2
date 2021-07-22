@@ -6,13 +6,13 @@ cubo()
 document.getElementById('mudar').addEventListener('click', () => {
     state = !state;
     if(state){
-        $('#glowscript1').empty();
-        window.__context = { glowscript_container: $("#glowscript1") };
-        cubo()
+        $('#glowscript2').empty();
+        window.__context = { glowscript_container: $("#glowscript2") };
+        esfera()
 
     } else {
-        $('#glowscript1').empty();
-        window.__context = { glowscript_container: $("#glowscript1") };
+        $('#glowscript2').empty();
+        window.__context = { glowscript_container: $("#glowscript2") };
         cilindro()
     }
 })
@@ -44,8 +44,11 @@ async function cilindro() {
 
     var vector = vec
     let scene = canvas()
+    console.log(vec(0,1,1))
     scene.range = 2
-    let b = cylinder({color:color.cyan})
+    let b = cylinder({color:color.cyan, axis: vec(6,0,0), pos: vec(-3, 0, 0)})
+    let a = arrow({color: vec(89/255, 189/255, 136/255)})
+    b.rotate({angle: 0.8, axis: vec(1,1,0)})
 }
 
 async function esfera() {
@@ -59,7 +62,7 @@ async function esfera() {
 let cond = 1
 window.addEventListener('scroll', () => {
 
-    if(window.scrollY < 200 && cond == 0) {
+    if(window.scrollY < 400 && cond == 0) {
         $('#glowscript2').empty();
         window.__context = { glowscript_container: $("#glowscript1") };
         cubo();
@@ -67,7 +70,7 @@ window.addEventListener('scroll', () => {
         cond = 1;
     }
 
-    if(window.scrollY > 200 && cond == 1) {
+    if(window.scrollY > 400 && cond == 1) {
         $('#glowscript1').empty();
         window.__context = { glowscript_container: $("#glowscript2") };
         esfera();

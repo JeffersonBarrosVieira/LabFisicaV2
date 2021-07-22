@@ -152,12 +152,14 @@ html, body {
 #content-section {
     max-width: 1200px;
     width: calc(100% - 30px);
-    height: 300px;
+    /* height: 300px; */
     /* background-color: #47cf7211; */
     /* border: 2px solid #c9c9c9; */
     border-radius: 5px;
     margin: 15px auto;
-    padding: 15px;
+    padding: 15px; 
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -175,14 +177,12 @@ html, body {
     font-family: 'Patrick Hand', cursive;
 }
 
-.align-cols {
-    display: flex;
-    flex-direction: row;
-}
-
 #content-section .col {
     flex: 1;
+    min-width: 300px;
+    height: 330px;
     padding: 0 15px;
+    margin: 10px 0;
 }
 
 #content-section .quadro {
@@ -200,8 +200,10 @@ html, body {
     font-size: 18px;
     color: white;
     text-align: justify;
-    height: 100%;
+    height: 300px;
+    max-width: 300px;
     padding: 0 25px;
+    margin: 25px auto;
 }
 
 #content-section .card h3 {
