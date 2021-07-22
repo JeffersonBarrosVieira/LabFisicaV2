@@ -98,6 +98,7 @@ hr.iniciar {
     padding: 0 15px 0 15px;
     align-items: center;
     flex: 1;
+    margin-left: 15px;
     height: 100%;
 }
 
@@ -202,7 +203,7 @@ hr.iniciar {
     background-color: #272e37;
     border-radius: 10px;
     font-size: 18px;
-    color: white;
+    color: rgb(209, 209, 209);
     text-align: justify;
     height: 300px;
     max-width: 300px;

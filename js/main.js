@@ -5,7 +5,7 @@ seta = document.getElementById('seta');
 function esconderBar(cond){
     if(cond) {
         main_slide_bar.style.marginLeft = "-208px";
-        main_content.style.marginLeft = "30px";
+        main_content.style.marginLeft = "17px";
         seta.style.transform = "rotate(0deg)";
     }
     if(!cond){
