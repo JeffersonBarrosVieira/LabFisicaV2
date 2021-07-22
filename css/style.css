@@ -57,6 +57,7 @@ html, body {
 
 hr.iniciar {
     border-top: 2px solid #47cf72;
+    border-bottom: 1px solid #47cf72;
 }
 
 #iniciar button {
