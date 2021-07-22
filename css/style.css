@@ -68,6 +68,19 @@ html, body {
 
 }
 
+#main-slide-bar .topicos{
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+    padding: 10px 0 15px 0;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    border-top: 3px solid #ffcd56;
+    border-bottom: 3px solid #15c3f7;
+    border-radius: 2px;
+}
+
 #main-topo {
     height: 74px;
     width: 100%;
@@ -158,6 +171,7 @@ html, body {
 #content-section .content {
     margin-top: 15px;
     font-size: 22px;
+    text-align: justify;
     font-family: 'Patrick Hand', cursive;
 }
 
@@ -183,8 +197,28 @@ html, body {
 #content-section .card {
     background-color: #272e37;
     border-radius: 10px;
+    font-size: 18px;
+    color: white;
+    text-align: justify;
     height: 100%;
-    width: 100%;
+    padding: 0 25px;
+}
+
+#content-section .card h3 {
+    color: white;
+    font-size: 25px;
+}
+
+#content-section .card i {
+    color: rgb(227, 232, 255);
+    background-color: #0b0d0f;
+    font-size: 35px;
+    font-weight: 800;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: -25px;
+    margin-left: 0px;
+    border: 1px solid #15c3f7;
 }
 
 .glowscript {
@@ -213,5 +247,6 @@ html, body {
 }
 
 #canvas1 {
-    border-bottom: 2px solid #47cf72;
+    border-bottom: 3px solid #47cf72;
+    padding-bottom: 10px;
 }
