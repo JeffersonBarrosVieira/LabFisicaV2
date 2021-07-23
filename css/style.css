@@ -283,6 +283,7 @@ hr.iniciar {
 
 footer {
     padding: 10px 40px;
+    margin-left: -10px;
     background-color: #1c2027;
     font-size: 16px;
 }
