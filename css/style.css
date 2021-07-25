@@ -5,6 +5,17 @@
     color: white;
 }
 
+a {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 7px;
+    transition: 0.3s all ease-out;
+}
+
+a:hover{
+    background-color: #000000c7;
+}
+
 html, body {
     margin: 0;
     padding: 0;
