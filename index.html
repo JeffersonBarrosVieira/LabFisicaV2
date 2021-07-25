@@ -38,7 +38,7 @@
         <form action="" id="formulario">
             <i class="fas fa-times"></i>
             <label for="">Assunto:</label>
-            <input name="assunto" type="text" id="assunto">
+            <input name="assunto" type="text" id="assunto" placeholder="Insira o assunto">
             <label for="">Mensagem:</label>
             <textarea name="mensagem" id="mensagem"> </textarea>
             <input class="btn-formulario" type="submit" value="Enviar">
@@ -100,7 +100,8 @@
                     <i class="fas fa-comments"></i>
                     <h3>Envie Sujestões</h3>
                     <p> Encontrou algum problema? Ou você tem situações físicas em mente que deseja sujerir para serem
-                        simuladas aqui no LabFísica? Que massa!!! Pois envie uma mensagem agora!! Explicando detalhadamente.</p>
+                        simuladas aqui no LabFísica? Que massa!!! Pois envie uma mensagem agora!! Explicando
+                        detalhadamente.</p>
                     <button id="send-email">Escrever</button>
                 </div>
             </div>
@@ -116,11 +117,15 @@
                 <div class="title">
                     Vamos começar?
                 </div>
-                <div class="content texto">
-                    Este laboratório de física online tem como objetivo, tornar possível o acesso à simulações físicas
-                    de situações reais $$ f(t) = \left( \frac{d^2 x}{dt^2} \right)_{t_0 = 0} t^x$$
+                <div class="content">
+                    Essas animações são interativas! É possível rotacionar o objeto e dar zoom!!! :0 Muito legal né?! ^^ Então... vamos lá? Para visualizar as instruções selecione o aparelho que está usando:
+                    <div id="aparelho">
+                        <div class="celular"> <button id="celular"></button> Celular</div>
+                        <div class="computador"><button id="computador"></button> Computador</div>
+                    </div>
+                    <p id="instrucoes"></p>
                 </div>
-                <button id="mudar"> Mudar </button>
+                <!-- <button id="mudar"> Mudar </button> -->
             </div>
         </section>
         <section id="content-section">
@@ -191,6 +196,7 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+    <script src="js/escreverTexto.js"></script>
 </body>
 
 </html>

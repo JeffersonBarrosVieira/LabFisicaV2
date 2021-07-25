@@ -159,9 +159,6 @@ hr.iniciar {
 #content-section {
     max-width: 1200px;
     width: calc(100% - 30px);
-    /* height: 300px; */
-    /* background-color: #47cf7211; */
-    /* border: 2px solid #c9c9c9; */
     border-radius: 5px;
     margin: 15px auto;
     padding: 15px; 
@@ -240,6 +237,39 @@ hr.iniciar {
     margin-bottom: 20px;
 }
 
+#aparelho {
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 25px;
+}
+
+#aparelho .celular,
+#aparelho .computador {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    gap: 5px;
+}
+
+#aparelho button {
+    margin: 0;
+    padding: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid #e5e7e7
+}
+
+#instrucoes {
+    color: white;
+}
+
 #send-email {
     position: absolute;
     top: 0;
@@ -288,9 +318,6 @@ hr.iniciar {
 #formula-section {
     max-width: 1200px;
     width: calc(100% - 30px);
-    /* height: 300px; */
-    /* background-color: #47cf7211; */
-    /* border: 2px solid #c9c9c9; */
     border-radius: 5px;
     margin: 15px auto;
     padding: 15px; 

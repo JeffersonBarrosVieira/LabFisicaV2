@@ -1,11 +1,11 @@
-enviar_email = document.getElementById('send-email');
-corpo_formulario = document.getElementById('formulario-content');
-fechar_formulario = document.querySelector('#formulario .fa-times');
-btn_formulario = document.querySelector('#formulario .btn-formulario');
-formulario = document.getElementById('formulario');
+const enviar_email = document.getElementById('send-email');
+const corpo_formulario = document.getElementById('formulario-content');
+const fechar_formulario = document.querySelector('#formulario .fa-times');
+const btn_formulario = document.querySelector('#formulario .btn-formulario');
+const formulario = document.getElementById('formulario');
 
-assunto = document.getElementById('assunto');
-mensagem = document.getElementById('mensagem');
+const assunto = document.getElementById('assunto');
+const mensagem = document.getElementById('mensagem');
 
 enviar_email.addEventListener('click', (e) => {
     e.preventDefault();

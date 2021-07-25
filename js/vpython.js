@@ -3,19 +3,19 @@ let state = true;
 window.__context = { glowscript_container: $("#glowscript1") }
 cubo()
 
-document.getElementById('mudar').addEventListener('click', () => {
-    state = !state;
-    if(state){
-        $('#glowscript2').empty();
-        window.__context = { glowscript_container: $("#glowscript2") };
-        esfera()
+// document.getElementById('mudar').addEventListener('click', () => {
+//     state = !state;
+//     if(state){
+//         $('#glowscript2').empty();
+//         window.__context = { glowscript_container: $("#glowscript2") };
+//         esfera()
 
-    } else {
-        $('#glowscript2').empty();
-        window.__context = { glowscript_container: $("#glowscript2") };
-        cilindro()
-    }
-})
+//     } else {
+//         $('#glowscript2').empty();
+//         window.__context = { glowscript_container: $("#glowscript2") };
+//         cilindro()
+//     }
+// })
 
 
 
@@ -44,9 +44,9 @@ async function cilindro() {
 
     var vector = vec
     let scene = canvas()
-    console.log(vec(0,1,1))
+    // console.log(vec(0,1,1))
     scene.range = 2
-    let b = cylinder({color:color.cyan, axis: vec(6,0,0), pos: vec(-3, 0, 0)})
+    let b = cylinder({color:color.cyan, axis: vec(6,0,0), pos: vec(-2, 0, 0)})
     let a = arrow({color: vec(89/255, 189/255, 136/255)})
     b.rotate({angle: 0.8, axis: vec(1,1,0)})
 }
@@ -76,9 +76,7 @@ window.addEventListener('scroll', () => {
     if(y0 < 150 && cond == 1) {
         $('#glowscript1').empty();
         window.__context = { glowscript_container: $("#glowscript2") };
-        esfera();
-
-        // escreverTexto(document.querySelectorAll('#content-section .card p')[1])
+        cilindro();
 
         cond = 0;
     }

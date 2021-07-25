@@ -318,18 +318,3 @@ function getScrollTopByHref(element){
   };
 
 
-function escreverTexto(texto) {
-    const letras = texto.innerHTML.split('');
-
-    texto.innerHTML = '';
-
-    let tempo;
-
-    // tempo.clearInterval()
-
-    letras.forEach( (letra, i) => {
-        tempo = setTimeout( () => {
-            texto.innerHTML += letra;
-        }, 75 *i )
-    } )
-}
