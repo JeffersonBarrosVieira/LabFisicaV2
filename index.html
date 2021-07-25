@@ -2,18 +2,15 @@
 <html lang="en">
 
 <head>
-    <script async src="https://kit.fontawesome.com/1a5afcdf38.js"
-            crossorigin="anonymous"></script>
-    
+    <script async src="https://kit.fontawesome.com/1a5afcdf38.js" crossorigin="anonymous"></script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab Física</title>
 
-    <link type="text/css"
-            href="https://s3.amazonaws.com/glowscript/css/ide.css"
-            rel="stylesheet" />
-            
+    <link type="text/css" href="https://s3.amazonaws.com/glowscript/css/ide.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="#">
     <link rel="shortcut icon" type="image/x-icon" href="/img/icon.png" />
@@ -37,14 +34,26 @@
         <div id="seta"></div>
     </header>
 
+    <div id="formulario-content">
+        <form action="" id="formulario">
+            <i class="fas fa-times"></i>
+            <label for="">Assunto:</label>
+            <input name="assunto" type="text" id="assunto">
+            <label for="">Mensagem:</label>
+            <textarea name="mensagem" id="mensagem"> </textarea>
+            <input class="btn-formulario" type="submit" value="Enviar">
+        </form>
+    </div>
+
+
     <main id="main-content">
         <div id="main-topo">
             <div class="pesquisar">
                 <input id="text" type="text" placeholder="Pesquisar">
             </div>
             <div class="botoes">
-                <button>Sing Up</button>
-                <button>Log In</button>
+                <button id="sign-up">Sign Up</button>
+                <button id="log-in">Log In</button>
             </div>
         </div>
 
@@ -55,8 +64,9 @@
                     Um Laboratório de Física em suas mãos
                 </div>
                 <div class="content">
-                    LabFísica é um ambiente de desenvolvimento acadêmico para estudantes e professores da área da Física.
-                    Resolva problemas físicos, visualize e interaja com ele. #VamosModelar
+                    LabFísica é um ambiente de desenvolvimento acadêmico para estudantes e professores da área da
+                    Física. Resolva problemas físicos, visualize, interaja com ele e realize uma análise da modelagem
+                    matemática completa que será disponibilizada!!! <br><br> #VamosModelar
                 </div>
             </div>
             <div class="col">
@@ -70,25 +80,28 @@
             <div class="col">
                 <div class="card">
                     <i class="fas fa-cubes"></i>
-                    <h3>Problemas Físicos</h3>
-                    Resolva desafios proposto de problemas físicos. Veja a simulação, interaja com ela e realize uma análise da modelagem matemática completa.
-                    <br><br><button>Exemplo</button>
+                    <h3>Simulação Física</h3>
+                    <p> Muitas vezes devido a impossibilidade de testar técnicas e hipóteses de resolução diretamente no
+                        sistema real. Somos impostos a solucionar problemas através de uma analogia com a realidade: a
+                        Simulação.</p>
                 </div>
             </div>
             <div class="col">
                 <div class="card">
                     <i class="fas fa-square-root-alt"></i>
                     <h3>Modelo Matemático</h3>
-                    Resolva desafios proposto de problemas físicos. Veja a simulação, interaja com ela e realize uma análise da modelagem matemática completa.
-                    <br><br><button>Exemplo</button>
+                    <p> Simulações utilizam modelos, em muitos casos, se uma solução analítica for possível. Se estes
+                        conservam características: FÍSICAS e LÓGICAS do SISTEMA REAL imitado, trará resultados próximos
+                        ao da realidade.</p>
                 </div>
             </div>
             <div class="col">
                 <div class="card">
                     <i class="fas fa-comments"></i>
-                    <h3>Envie Susjestão</h3>
-                    Resolva desafios proposto de problemas físicos. Veja a simulação, interaja com ela e realize uma análise da modelagem matemática completa.
-                    <br><br><button>Exemplo</button>
+                    <h3>Envie Sujestões</h3>
+                    <p> Encontrou algum problema? Ou você tem uma situações físicas em mente que deseja sujerir para serem
+                        simuladas aqui no LabFísica? Que massa!!! Pois envie uma mensagem agora!! Explicando detalhadamente.</p>
+                    <button id="send-email">Escrever</button>
                 </div>
             </div>
         </section>
@@ -103,15 +116,16 @@
                 <div class="title">
                     Vamos começar?
                 </div>
-                <div class="content">
+                <div class="content texto">
                     Este laboratório de física online tem como objetivo, tornar possível o acesso à simulações físicas
-                    de situações reais $$ f(t) =  \left( \frac{d^2 x}{dt^2} \right)_{t_0 = 0}  t^x$$
+                    de situações reais $$ f(t) = \left( \frac{d^2 x}{dt^2} \right)_{t_0 = 0} t^x$$
                 </div>
                 <button id="mudar"> Mudar </button>
             </div>
         </section>
         <section id="content-section">
-            <div class="title" style="text-align: center; width: 100%; border-top: 3px solid #47cf72; padding-top: 20px;">
+            <div class="title"
+                style="text-align: center; width: 100%; border-top: 3px solid #47cf72; padding-top: 20px;">
                 Fórmulas Aleatória para testes:
             </div>
         </section>
@@ -125,7 +139,7 @@
                 Integral de Cauchy
                 $$ f(a) = \frac{1}{2\pi i} \oint\frac{f(z)}{z-a}dz $$
             </h5>
-            
+
             <!-- <h5>
                 Cosseno de dois Arcos
                 $$ \cos(\theta+\phi)=\cos(\theta)\cos(\phi)-\sin(\theta)\sin(\phi) $$
@@ -135,17 +149,17 @@
                 Teorema da Divergência de Gauss
                 $$ \int_D ({\nabla\cdot} F)dV=\int_{\partial D} F\cdot ndS $$
             </h5>
-            
+
             <h5>
                 Desvio Padrão
                 $$\sigma = \sqrt{ \frac{1}{N} \sum_{i=1}^N (x_i -\mu)^2} $$
             </h5>
-            
+
             <h5>
                 Rotacional de um Campo Vetorial
                 $$ \vec{\nabla} \times \vec{F} = $$
                 $$ \left( \frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z} \right) \mathbf{i} $$
-                $$ + \left( \frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x} \right) \mathbf{j} $$ 
+                $$ + \left( \frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x} \right) \mathbf{j} $$
                 $$ + \left( \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right) \mathbf{k} $$
             </h5>
 
@@ -160,26 +174,22 @@
     <canvas id="canvas2"></canvas>
 
     <script src="js/main.js"></script>
+    <script src="js/sendEmail.js"></script>
+    <script src="js/login.js"></script>
 
     <!-- Importando o VPython -->
-    <script type="text/javascript"
-            src="https://s3.amazonaws.com/glowscript/lib/jquery/2.1/jquery.min.js"
-            ></script>
+    <script type="text/javascript" src="https://s3.amazonaws.com/glowscript/lib/jquery/2.1/jquery.min.js"></script>
 
     <script type="text/javascript"
-            src="https://s3.amazonaws.com/glowscript/lib/jquery/2.1/jquery-ui.custom.min.js"
-            ></script>
+        src="https://s3.amazonaws.com/glowscript/lib/jquery/2.1/jquery-ui.custom.min.js"></script>
 
-    <script type="text/javascript"
-            src="https://s3.amazonaws.com/glowscript/package/glow.3.0.min.js"
-            ></script>
+    <script type="text/javascript" src="https://s3.amazonaws.com/glowscript/package/glow.3.0.min.js"></script>
 
     <script src="js/vpython.js"></script>
 
     <!-- Importando o MathJax -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script"
-            async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </body>
 

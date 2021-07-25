@@ -62,7 +62,7 @@ async function esfera() {
 let cond = 1
 window.addEventListener('scroll', () => {
 
-    if(window.scrollY < 500 && cond == 0) {
+    if(window.scrollY < 600 && cond == 0) {
         $('#glowscript2').empty();
         window.__context = { glowscript_container: $("#glowscript1") };
         cubo();
@@ -70,10 +70,12 @@ window.addEventListener('scroll', () => {
         cond = 1;
     }
 
-    if(window.scrollY > 500 && cond == 1) {
+    if(window.scrollY > 600 && cond == 1) {
         $('#glowscript1').empty();
         window.__context = { glowscript_container: $("#glowscript2") };
         esfera();
+
+        // escreverTexto(document.querySelectorAll('#content-section .card p')[1])
 
         cond = 0;
     }

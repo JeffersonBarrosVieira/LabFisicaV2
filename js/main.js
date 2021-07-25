@@ -316,3 +316,20 @@ function getScrollTopByHref(element){
       window.scroll(newX, newY);
     }, 1000 / 60); // 60 fps
   };
+
+
+function escreverTexto(texto) {
+    const letras = texto.innerHTML.split('');
+
+    texto.innerHTML = '';
+
+    let tempo;
+
+    // tempo.clearInterval()
+
+    letras.forEach( (letra, i) => {
+        tempo = setTimeout( () => {
+            texto.innerHTML += letra;
+        }, 75 *i )
+    } )
+}
