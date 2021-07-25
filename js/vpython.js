@@ -59,10 +59,13 @@ async function esfera() {
     let b = sphere({color:color.cyan})
 }
 
-let cond = 1
-window.addEventListener('scroll', () => {
+let cond = 1;
 
-    if(window.scrollY < 600 && cond == 0) {
+window.addEventListener('scroll', () => {
+    
+    let y0 = document.querySelector('#send-email').getBoundingClientRect().y;
+
+    if(y0 > 150 && cond == 0) {
         $('#glowscript2').empty();
         window.__context = { glowscript_container: $("#glowscript1") };
         cubo();
@@ -70,7 +73,7 @@ window.addEventListener('scroll', () => {
         cond = 1;
     }
 
-    if(window.scrollY > 600 && cond == 1) {
+    if(y0 < 150 && cond == 1) {
         $('#glowscript1').empty();
         window.__context = { glowscript_container: $("#glowscript2") };
         esfera();
